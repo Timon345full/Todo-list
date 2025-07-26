@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Todo list</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <p>Todo list</p>
+  <div class="add_note">
+    <input type="text" id="taskInput" placeholder="Добавить новую задачу" />
+    <button class="add" title="Добавить задачу" id="addBtn">+</button>
+  </div>
+</header>
+<nav>
+  <div class="category" id="categoryFilter">
+    <div data-category="all" class="active">Все</div>
+    <div data-category="active">Активные</div>
+    <div data-category="completed">Выполненные</div>
+  </div>
+</nav>
+<main>
+  <div class="note" id="taskList">
+    <!-- Задачи будут добавляться сюда -->
+  </div>
+</main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
